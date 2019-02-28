@@ -10,12 +10,26 @@ namespace Week1
     {
         static void Main(string[] args)
         {
-            //Say hello
-            Console.WriteLine("Hello!");
-            //Console.ReadLine();
+            for (int i =0; i<10; i++)
+            {
+                Console.WriteLine(i);
+            }
+
+            Console.ReadLine();
+
+
+            for (int int1 = 0; int1 < length; int1++)
+            {
+
+            }
+
+
+
+
+
 
                        
-            Console.Write("Please enter your age:");    //ask user for age
+           /* Console.Write("Please enter your age:");    //ask user for age
             int age = int.Parse(Console.ReadLine());    //parse user input and store as int age
 
             Console.Write("Please enter your name:");   //ask user for name
@@ -23,7 +37,7 @@ namespace Week1
             
 
             Console.WriteLine("Hi {0} You are {1} years old",name,age); //output user's name and age
-            Console.ReadLine();
+            Console.ReadLine(); */
             
 
             
