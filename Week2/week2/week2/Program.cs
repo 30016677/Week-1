@@ -182,11 +182,12 @@ namespace week2
             */
 
             //Topic 3 task 4
+            /*
             int loop = 1;
            
             while (loop == 1)
             {
-                Console.WriteLine("Enter a number");
+                Console.WriteLine("\nEnter a number");
                 int i = int.Parse(Console.ReadLine());
 
                 if (i % 2 == 0)
@@ -199,6 +200,200 @@ namespace week2
                     Console.WriteLine(i + " is an odd number");
                 }
             }
+
+            Console.ReadLine();
+            */
+
+            //Topic 3 task 5
+            /*
+            double pin;
+            double pinCheck;
+            //bool loop = true;
+
+            //while (loop == true)
+            //{
+                
+                Console.WriteLine("Please enter your new PIN:");
+                pin = double.Parse(Console.ReadLine());
+
+                if (pin > 0 && pin <10000)
+                {
+                    Console.WriteLine("Please re enter your new PIN:");
+                    pinCheck = double.Parse(Console.ReadLine());
+
+                    if (pinCheck == pin)
+                    {
+                        Console.WriteLine("Your PIN has been set!");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Error. Your PIN numbers did not match.");
+                        
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("This PIN number is not within the right parameters. Please try again");
+
+                }
+
+            //}
+
+
+            Console.ReadLine();
+            */
+
+            //topic 3 task 6
+            /*
+            string letter1;
+            string letter2;
+            string letter3;
+
+            Console.WriteLine("Think of a palindrome.");
+            Console.WriteLine("what is the first letter?");
+            letter1 = Console.ReadLine();
+            Console.WriteLine("what is the second letter?");
+            letter2 = Console.ReadLine();
+            Console.WriteLine("what is the third letter?");
+            letter3 = Console.ReadLine();
+
+            if (letter1 == letter3)
+            {
+
+            
+                if (letter2 == "a" || letter2 == "e" || letter2 == "i" || letter2 == "o" || letter2 == "u")
+                {
+                    Console.WriteLine("Well done, your word is a palindrome!");
+
+                }
+                else
+                {
+                    Console.WriteLine("Error, that is not an actual word");
+                    
+                }
+                
+            }
+            else
+            {
+                Console.WriteLine("Sorry, your word is not a palindrome");
+            }
+
+
+            Console.ReadLine();
+            */
+
+            //Switches ex 1
+            /*
+            string answer;
+            bool bool1 = false;
+
+            Console.WriteLine("Can you guess my favourite bird out of these options:");
+            Console.WriteLine("Pigeon, Kiwi, Sparrow, Hawk.");
+
+            while (bool1 == false) // loop until correct answer is given
+            { 
+            answer = Console.ReadLine().ToLower(); //read users input and covert to lowercase
+
+                switch (answer)
+                {
+                    case "pigeon":
+                    case "sparrow":
+                    case "hawk":
+                        Console.WriteLine("Wrong"); //for wrong answers
+                        break;
+
+                    case "kiwi":
+                        Console.WriteLine("Correct!"); //for correct answer
+                        bool1 = true; //end loop
+                        break;
+
+                    default:
+                        Console.WriteLine("That wasn't an option");
+                        break;
+                }
+
+            }
+            Console.ReadLine();
+            */
+
+            //switches ex 2
+            /*
+            double applePrice = 1.25;
+            double bananaPrice = 3.15;
+            double kiwifruitPrice = 4.65;
+            double orangePrice = 2.75;
+            bool loop = false;
+
+            Console.WriteLine("Enter the name of your fruit");
+            Console.WriteLine("I only know four fruits: apple, banana, kiwifruit, orange");
+
+            while (loop == false)
+            {
+                string fruit = Console.ReadLine().ToLower();
+
+                switch (fruit)
+                {
+                    case "apple":
+                        Console.WriteLine("The price of apples is $" + applePrice);
+                        break;
+                    case "banana":
+                        Console.WriteLine("The price of bananas is $" + bananaPrice);
+                        break;
+                    case "kiwifruit":
+                        Console.WriteLine("The price of kiwifruit is $" + kiwifruitPrice);
+                        break;
+                    case "orange":
+                        Console.WriteLine("The price of oranges is $" + orangePrice);
+                        break;
+                    default:
+                        Console.WriteLine("i don't know the price of that furit sorry.");
+                        break;
+
+
+                }
+            }
+            Console.ReadLine();
+            */
+
+            //switches ex 3
+            double answer;
+
+            Console.WriteLine("******************");
+            Console.WriteLine("****CALCULATOR****");
+            Console.WriteLine("******************");
+            Console.WriteLine();
+            Console.WriteLine("Please enter your first number");
+            double num1 = double.Parse(Console.ReadLine());
+            Console.WriteLine("Please enter the operator you wish to use. eg + - * /");
+            string operator1 = Console.ReadLine();
+            Console.WriteLine("Please enter your second number");
+            double num2 = double.Parse(Console.ReadLine());
+
+            switch (operator1)
+            {
+                case "+":
+                    answer = num1 + num2;
+                    Console.WriteLine(num1 + " + " + num2 + " = " + answer.ToString());
+                    break;
+                case "-":
+                    answer = num1 - num2;
+                    Console.WriteLine(num1 + " - " + num2 + " = " + answer.ToString());
+                    break;
+                case "*":
+                    answer = num1 * num2;
+                    Console.WriteLine(num1 + " * " + num2 + " = " + answer.ToString());
+                    break;
+                case "/":
+                    answer = num1 / num2;
+                    Console.WriteLine(num1 + " / " + num2 + " = " + answer.ToString());
+                    break;
+                default:
+                    Console.WriteLine("unexpected input");
+                    break;
+            }
+            
+
+
 
             Console.ReadLine();
         }
