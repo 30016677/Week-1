@@ -195,18 +195,81 @@ namespace week_3_loops
             */
 
             //task 2
+            //for loop
+            Console.WriteLine("\n======For======");
             Console.WriteLine("\nPlease enter a symbol:");
             string symbol = Console.ReadLine();
             Console.WriteLine("\nhow many times would you like to repeat your symbol");
-            int counter = int.Parse(Console.ReadLine());
+            int repeat = int.Parse(Console.ReadLine()); //user input
 
-            for (int i = 1; i < counter; i++)
+            for (int i = 0; i < repeat; i++)
             {
                 Console.Write(symbol);
             }
 
-            
+            //while loop
+            Console.WriteLine("\n======While======");
+            Console.WriteLine("\nPlease enter a symbol:");
+            symbol = Console.ReadLine();
+            Console.WriteLine("\nhow many times would you like to repeat your symbol");
+            repeat = int.Parse(Console.ReadLine()); //user input
+
+            int counter = 0;
+            while(counter < repeat)
+            {
+                Console.Write(symbol);
+                counter++;
+            }
+
+            //do while
+            Console.WriteLine("\n======Do while======");
+            Console.WriteLine("\nPlease enter a symbol:");
+            symbol = Console.ReadLine();
+            Console.WriteLine("\nhow many times would you like to repeat your symbol");
+            repeat = int.Parse(Console.ReadLine()); //user input
+
+            counter= 0; //reset counter
+            if (repeat > 0) { 
+            do
+            {
+                Console.Write(symbol);
+                counter++;
+            } while (counter < repeat);
+            }
+            else if (repeat == 0)
+            {
+                Console.ReadLine();
+            }
+            else
+            {
+                Console.WriteLine("Error.");
+            }
+
             Console.ReadLine();
+            
+
+            //task 3 
+            /*
+            string symbol = "#";
+            //int width = 5;
+            //int height = 8;
+
+            Console.WriteLine("\nHere is a rectangle made of hashtags that is 5 by 8");
+
+            for (int height = 0; height < 8; height++)
+            {
+                
+                for (int width = 0; width < 5; width++)
+                {
+                    Console.Write(symbol);
+                }
+                Console.WriteLine("\r");
+            }
+
+
+
+            Console.ReadLine();
+            */
         }
     }
 }
