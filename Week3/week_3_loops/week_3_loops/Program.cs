@@ -138,8 +138,8 @@ namespace week_3_loops
             Console.ReadLine();
             */
             //Task 3
-
             /*
+            
             Console.WriteLine("Number     Square     Cube");
             Console.WriteLine("--------------------------");
 
@@ -177,12 +177,13 @@ namespace week_3_loops
 
             //loops and ifs exercises
             //task 1
-            /*
+            
             Console.WriteLine("display odd numbers from 76 to 46 (descending):");
-            int start = 75;
-            int end = 47;
+            //int start = 75;
+            //int end = 47;
+
             int i = 75;
-            while (i <= start && i >= end){
+            while ( i >= 47){
                 if (i % 2 == 1) {
                     Console.WriteLine(i);
                 }
@@ -192,10 +193,11 @@ namespace week_3_loops
 
             Console.WriteLine("\nend");
             Console.ReadLine();
-            */
+            //i <= start &&
 
             //task 2
             //for loop
+            /*
             Console.WriteLine("\n======For======");
             Console.WriteLine("\nPlease enter a symbol:");
             string symbol = Console.ReadLine();
