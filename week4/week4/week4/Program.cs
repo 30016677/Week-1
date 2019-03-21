@@ -11,9 +11,9 @@ namespace week4
         static void Main(string[] args)
         {
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine("************************");
-            Console.WriteLine("****Week 4 Algrebra?****");
-            Console.WriteLine("************************");
+            Console.WriteLine("*******************************");
+            Console.WriteLine("****Week 4 Algrebra/Methods****");
+            Console.WriteLine("*******************************");
 
             //Question 1
             /*
@@ -92,7 +92,7 @@ namespace week4
             Console.WriteLine("press ENTER to quit");
             Console.ReadLine();
             */
-
+            /* extension1
             Console.WriteLine("extesnion1. solving the quadratic equation x^2+5x+6=0");
             int a = 1;
             int b = 5;
@@ -101,29 +101,110 @@ namespace week4
 
             Console.WriteLine($"a is {a}, b is {b}, c is {c}.");
 
-            for(int i = 1; i < b+1; i++)
+            for(int i = 1; i <= c; i++) //find the multiples of C
             {
-                if (i <= b)
-                {
-                    
+               
                     if (c % i == 0)
                     {
-
+                        Console.WriteLine(i);
                     }
-                }                      
+                    
+                
+            }
+                
+                                      
                     //if (i <= b && c % i == 0)
                    // {
                         
                         //    Console.WriteLine(i);
                         
                    // }
-                    
-                
-            }
+            Console.ReadLine();
+            */
+
+            //METHODS
+            //exercise 1
+            /*
+            Console.WriteLine("\n Methods exercise 1");
+            Console.Write("\nPlease enter a number:");
+            int input = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("The opposite of your number is: " + Opposite(input));
+            
+            Console.ReadLine();
+            */
+            //exercise 2
+            /*
+            Console.WriteLine("\nMethods - exercis 2");
+            Console.Write("\nPlease enter your distance in miles: ");
+            double miles = double.Parse(Console.ReadLine());
+
+            Console.WriteLine(miles + " miles  is " + Kilometres(miles) + " in kilometres.");
+            
+            Console.ReadLine();
+            */
+            //exercise 3
+            /*
+            Console.WriteLine("Methods Exercise 3");
+            Console.WriteLine("\nWhat is the radius of your circle?");
+            double r = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("the circumfrence of your circle is {0}" +
+                " and the area of your circle is {1}", Circumference(r), Area(r));
 
             Console.ReadLine();
+            */
+            //exercise 4
+            //Console.WriteLine("Methods Exercise 4");
+
+            //Task 1 and 2
+            
+            Console.WriteLine("Methods Task 1 and 2");
+            Console.WriteLine("\n This app will calculate you BMI");
+            Console.Write("Please enter your weight in KG: ");
+            float weight = float.Parse(Console.ReadLine());
+            Console.Write("Please enter your Height in M: ");
+            float height = float.Parse(Console.ReadLine());
+
+            float bmi = Calculatebmi(weight, height); //bmi method
+
+            Console.WriteLine("\nYour BMI is " + bmi);
+
+            Console.WriteLine("You are " + CalculateCategory(bmi)); //call category method
+
+            Console.ReadLine();
+            
+            //task 3
+            
+           // Console.WriteLine("Methods Task 3")
 
         }
-
+        static int Opposite(int userInput) //methods exercise 1
+        {
+            return userInput * -1;
+        }
+        static double Kilometres(double userInput) //methods exercise 2
+        {
+            return userInput * 1.62137;
+        }
+        static double Circumference(double r) //methods exercise 3
+        {
+            return r * 2 * 3.1416;
+        }
+        static double Area(double r) //methods exercise 3
+        {
+            return r * r * 3.1416;
+        }
+        static float Calculatebmi(float w, float h)
+        {
+            return w / (h * h);
+        }
+        static string CalculateCategory(float bmiCat)
+        {
+            if (bmiCat < 18.5) { return "underweight"; }
+            else if (bmiCat >= 18.5 && bmiCat < 25) { return "normal weight"; }
+            else if (bmiCat >= 25 && bmiCat < 30) { return "overweight"; }
+            else {return "obese"; }
+        }
     }
 }
