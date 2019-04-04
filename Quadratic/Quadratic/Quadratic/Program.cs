@@ -10,6 +10,7 @@ namespace Quadratic
     {
         static void Main(string[] args)
         {
+            
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("------Solving quadratic equations------\n\n");
             Console.WriteLine("example quadratic: x^2+7x+10=0\n");
@@ -22,7 +23,7 @@ namespace Quadratic
             //double x = 0;
 
             //----quadratic formula method----
-            Console.WriteLine($"\nhere is your quadratic equation: {a}x^2 + {b}x +{c}.");
+            Console.WriteLine($"\nhere is your quadratic equation: {a}x^2 + {b}x + {c}.");
 
             //x = (-(b) + (Math.Sqrt(b * b - 4 * a * c))) / (2 * a);
             // Console.WriteLine("\nthe positive solution for x is " + x); //math for positive solution
@@ -35,55 +36,54 @@ namespace Quadratic
             //double bTest;
             //double bTest1 = 0;
             //double bTest2 = 0;
-            if (c < 0)//if c is positive
+            double num1;
+            double num2;
+            if (c > 0)//if c is positive
             {
-                for (double i = (-1*c); i <= c; i--)//set i to c; while i is <= -ve of c; i++
+                for (double i = ((-1)*c); i <= c; i++)//set i to -c; while i is <= c; i++
                 {
-                    //for(double j = b; j <= (-1*b); j++)//find addends of b (7)
-                    //{
-                    for(double bTest1 = 0;)
+                    if (c % i == 0) //find all whole multiples of c (10)
                     {
-                        if (c % i == 0) //find all whole multiples of c (10)
-                        {
-                            bTest1 = i;
-                            Console.WriteLine(i);
-                            //bTest(i); //test
-                            i++;
-                        }
-                        if (c % i == 0) //find all whole multiples of c (10)
-                        {
-                            bTest2 = i;
-                            Console.WriteLine(i);
-                            //bTest(i); //test 
-                        }
-                        if (bTest1 * bTest2 == c && bTest1 + bTest2 == b)
-                        {
-                            Console.WriteLine("(x+" + bTest1 + ")(x+" + bTest2 + ")");
-                        }
-                    }
-                    
-
+                        num1 = i; //(x num1)(x num2)
+                        num2 = c / num1; //(x num1)(x num2)
+                            if(num1 + num2 == b)
+                            {
+                                Console.WriteLine("x = " + (num1*-1).ToString() + " , " + (num2*-1).ToString());// show x =
+                                break;
+                            }
                         
-                    //}
+                    }
+                        
                     
 
                 }
             }
-            //else if (c > 0)
-            //{
-              //  for (double i = c; i <= (-1 * c); i--)
-                //{
-                  //  if (c % i == 0)
-                    //{
-                      //  Console.WriteLine(i);
+            else if (c < 0)//if c is negative
+            {
+                for (double i = ((-1) * c); i >= c; i--)//set i to -c; while i is >= c; i--
+                {
+                    if (c % i == 0) //find all whole multiples of c (10)
+                    {
+                        num1 = i; //(x num1)(x num2)
+                        num2 = c / num1; //(x num1)(x num2)
+                        if (num1 + num2 == b)
+                        {
+                            Console.WriteLine((num1 * -1).ToString() + " , " + (num2 * -1).ToString());// show x =
+                            break;
+                        }
 
-                    //}
-               // }
-            //}
+                    }
+
+
+
+                }
+            }
             
 
 
+
             Console.ReadLine();
+            
         }
         
     }
